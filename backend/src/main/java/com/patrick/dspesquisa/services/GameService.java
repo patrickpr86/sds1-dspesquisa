@@ -15,7 +15,7 @@ import com.patrick.dspesquisa.repositories.GameRepository;
 public class GameService {
 	
 	@Autowired
-	GameRepository gameRepository;
+	private GameRepository gameRepository;
 	
 	@Transactional(readOnly = true)
 	public List<GameDTO> findAll(){
