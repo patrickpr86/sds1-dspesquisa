@@ -12,6 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import com.patrick.dspesquisa.enums.Platform;
 
@@ -19,6 +20,7 @@ import com.patrick.dspesquisa.enums.Platform;
 @Table(name = "tb_game")
 public class Game implements Serializable{
 	private static final long serialVersionUID = 1L;
+	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
