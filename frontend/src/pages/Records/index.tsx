@@ -6,7 +6,7 @@ import {formatDate} from './helpers'
 import Pagination from './Pagination';
 import Filters from '../../components/Filters'
 
-const BASE_URL = 'https://dashboard.heroku.com/apps/sds1-patrick';
+const BASE_URL = 'https://sds1-patrick.herokuapp.com';
 
 const Records = () => {
     const [recordsResponse, setRecordsResponse] = useState<RecordsResponse>();
