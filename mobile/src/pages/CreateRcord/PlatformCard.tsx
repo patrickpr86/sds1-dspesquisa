@@ -17,11 +17,13 @@ const PlatformCard = ({
   onChange,
    icon,
    activePlatform
+
  }: Props) => {
    const isActive = platform === activePlatform;
    const backgroundColor = isActive ? '#fad7c8' : '#fff';
    const textColor = isActive ? '#ED7957' : '#9E9E9E';
     return (
+      
     <RectButton 
     style={[styles.platformCard, { backgroundColor }]}
     onPress={() => onChange(platform)} 
