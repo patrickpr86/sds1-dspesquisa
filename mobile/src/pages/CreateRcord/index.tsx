@@ -12,7 +12,8 @@ const placeholder = {
     label: 'Selecione o game', value: null
 }
 
-const BASE_URL = 'https://sds1-fabstussi.herokuapp.com';
+const BASE_URL = 'https://sds1-patrick.herokuapp.com';
+
 
 const mapSelectValue = (games: Game[]) => {
     return games.map(game => ({
