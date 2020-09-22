@@ -6,12 +6,13 @@ import Header from '../../components/Header';
 import PlatformCard from './PlatformCard';
 import { GamePlatform, Game } from './types';
 import RNPickerSelect from 'react-native-picker-select'
-import Axios from 'axios';
+import axios from 'axios';
 
 const placeholder = {
-    label: 'Selecione o game', value: null
+    label: 'Selecione o game',
+    value: null
 }
-
+//const BASE_URL = 'http://192.168.0.10:8080';
 const BASE_URL = 'https://sds1-patrick.herokuapp.com';
 
 
@@ -43,17 +44,19 @@ const CreateRecord = () => {
     const handleSubmit = () => {
         const payload = { name, age, gameId: selectedGame };
 
-        Axios.post(`${BASE_URL}/records`, payload).then(() => {
+        axios.post(`${BASE_URL}/records`, payload).then(() => {
             Alert.alert('Dados salvos com sucesso');
             setName('');
             setAge('');
             setSelectedGame('');
             setPlatform(undefined);
+            console.log("teste");
+            
         }).catch(() => Alert.alert('Erro ao salvar informações'))
     }
 
     useEffect(() => {
-        Axios.get(`${BASE_URL}/games`).then(response => {
+        axios.get(`${BASE_URL}/games`).then(response => {
             const selectValue = mapSelectValue(response.data)
             setAllGames(selectValue);
         }).catch(() => Alert.alert('Erro ao carregar os jogos'))

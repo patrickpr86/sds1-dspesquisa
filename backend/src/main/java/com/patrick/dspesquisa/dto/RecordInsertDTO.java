@@ -29,11 +29,11 @@ public class RecordInsertDTO implements Serializable {
 		this.age = age;
 	}
 
-	public Long getGameID() {
+	public Long getGameId() {
 		return gameId;
 	}
 
-	public void setGameID(Long gameId) {
+	public void setGameId(Long gameId) {
 		this.gameId = gameId;
 	}
 	

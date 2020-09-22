@@ -31,7 +31,7 @@ public class RecordService {
 		entity.setAge(dto.getAge());
 		entity.setMoment(Instant.now());
 		
-		Game game = gameRepository.getOne(dto.getGameID());
+		Game game = gameRepository.getOne(dto.getGameId());
 		entity.setGame(game);
 		
 		entity = recordRepository.save(entity);
